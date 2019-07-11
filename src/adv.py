@@ -49,3 +49,31 @@ room['treasure'].s_to = room['narrow']
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+
+sword = Item("sword", "This is a sword")
+
+room["outside"].item.append(sword)
+
+
+player = Player("Surj", room['outside'])
+current_room = player.current_room
+
+print(current_room)
+
+valid_directions = ["n", "s", "e", "w"]
+
+while True: 
+    cmd = input("-> ")
+    if cmd in valid_directions:
+        player.travel(cmd)
+    elif cmd == "q":
+        print("Goodbye!")
+        exit()
+    elif cmd == "eat":
+        player
+    else:
+        print("I did not recognize that command")
+
+  
+    
+       
